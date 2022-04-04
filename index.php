@@ -1,6 +1,5 @@
 <?php
-    require_once 'controllers/produktet.php'; 
-    require_once 'controllers/controller3.php';
+    require_once 'controllers/produktet.php';
 ?>
 
 <!DOCTYPE html>

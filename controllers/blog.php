@@ -23,7 +23,7 @@
             $query->bindParam(":titulli", $request['titulli']);
             $query->bindParam(":pershkrimi", $request['pershkrimi']);
             $query->bindParam(":user", $session['emri']);
-            $query->bindParam(":data", $request['data']);
+            $query->bindParam(":data", $session['data']);
 
             $query->execute();
 
@@ -39,13 +39,14 @@
             return $query->fetch();
         }
 
-        public function update($request, $id){
-            $query = $this->db->pdo->prepare('UPDATE blogs SET foto = :foto, titulli = :titulli, pershkrimi = :pershkrimi, data = :data where ID_blog = :id');
+        public function update($request, $session, $id){
+            $query = $this->db->pdo->prepare('UPDATE blogs SET foto = :foto, titulli = :titulli, pershkrimi = :pershkrimi,user = :user, data = :data where ID_blog = :id');
 
             $query->bindParam(":foto", $request['foto']);
             $query->bindParam(":titulli", $request['titulli']);
             $query->bindParam(":pershkrimi", $request['pershkrimi']);
-            $query->bindParam(":data", $request['data']);
+            $query->bindParam(":user", $session['emri']);
+            $query->bindParam(":data", $session['data']);
             $query->bindParam(":id", $id);
 
             $query->execute();
@@ -57,6 +58,7 @@
             $query = $this->db->pdo->prepare('DELETE FROM blogs where ID_blog = :id');
 
             $query->bindParam(":id", $id);
+            $query->execute();
 
             return header('Location: ../views/dashboard.php');
         }

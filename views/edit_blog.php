@@ -15,6 +15,7 @@
 </style>
 
 <?php
+    session_start();
     require_once '../controllers/blog.php';
 
     if(isset($_GET['id'])){
@@ -24,8 +25,14 @@
     $e = new Blog;
     $edit = $e->edit($id);
 
-    if(isset($_POST['submit'])){
-        $e->update($_POST, $id);
+    $date = new DateTime();
+    $DateTime = $date->format("d-m-Y h:i a");
+
+    $_SESSION['data'] = $DateTime;
+
+
+    if(isset($_POST['submit']) && isset($_SESSION['emri']) && isset($_SESSION['data'])){
+        $e->update($_POST, $_SESSION, $id);
     }
 ?>
 
@@ -35,14 +42,12 @@
             <th>Foto</th>
             <th>Titulli</th>
             <th>Pershkrimi</th>
-            <th>Data</th>
         </tr>
         <form method = "POST">
         <tr>
             <td><input type="text" name = "foto" value = "<?php echo $edit['foto']; ?>"></td>
             <td><input type="text" name = "titulli" value = "<?php echo $edit['titulli']; ?>"></td>
             <td><input type="text" name = "pershkrimi" value = "<?php echo $edit['pershkrimi']; ?>"></td>
-            <td><input type="date" name = "data" value = "<?php echo $edit['data']; ?>"></td>
             <td><input type="submit" name = "submit" value = "Update"></td>
         </tr>
         </form>

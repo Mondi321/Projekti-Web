@@ -25,8 +25,13 @@
     session_start();
     require_once '../controllers/blog.php';
 
+    $date = new DateTime();
+    $DateTime = $date->format("d-m-Y h:i a");
+
+    $_SESSION['data'] = $DateTime;
+
     $insert = new Blog;
-    if (isset($_POST['submit']) && isset($_SESSION['emri'])){
+    if (isset($_POST['submit']) && isset($_SESSION['emri']) && isset($_SESSION['data'])){
         $insert->insert($_POST, $_SESSION);
     }
 ?>
@@ -37,14 +42,12 @@
             <th>Foto</th>
             <th>Titulli</th>
             <th>Pershkrimi</th>
-            <th>Data</th>
         </tr>
         <form method = "POST">
         <tr>
             <td><input type="file" name = "foto" ></td>
             <td><input type="text" name = "titulli" placeholder = "Shto titullin..."></td>
             <td><input type="text" name = "pershkrimi" placeholder = "Shto pershkrimin..."></td>
-            <td><input type="date" name = "data" placeholder = "Shto daten..."></td>
             <td><input type="submit" name = "submit" value = "Save"></td>
         </tr>
         </form>

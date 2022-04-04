@@ -30,7 +30,7 @@
     </nav>
     <br><br>
     <h1 class = "h1">WELCOME BACK <?php echo $_SESSION['emri']; ?></h1><br><br>
-    <?php if (isset($_SESSION['email']) && $_SESSION['email'] == 'admin123@admin.com'){
+    <?php if (isset($_SESSION['email']) && str_ends_with($_SESSION['email'], 'admin.com')){
         ?>
         <div id = "dashboard">
             <table class="content-table">
