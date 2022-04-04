@@ -1,0 +1,139 @@
+*
+{
+	margin:0;
+	padding: 0;
+	
+}
+ul
+{   text-align: center;
+	margin-top: 50px;
+	list-style-type: none;
+	
+}
+ul li
+{
+	display: inline-block;
+	padding: 10px;
+
+}
+ul li.active a
+{
+	background-color: white;
+	color: #c90d0d;
+}
+ul li a
+{
+
+	margin: 3px;
+	text-decoration: none;
+	color: white;
+	padding: 5px 20px;
+	border: 1px solid white;
+	transition: 0.5s ease;
+}
+ul li a:hover
+{
+	background-color: white;
+	color: #c90d0d;;
+	transition: 0.5s ease;
+}
+
+.team
+{
+	padding-top: 100px;
+	overflow: hidden;
+    background: linear-gradient(rgb(22 21 21),#4a3d3f,rgb(46 42 42));   
+	text-align: center;
+	padding: 60px;
+}
+.team h1
+
+{  
+	
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+}
+.team h2{
+
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+}
+.border
+{
+	display: block;
+	margin:auto;
+	width: 160px;
+	height: 3px;
+	background: #c90d0d;
+	margin-bottom:40px;
+}
+.qq
+{	
+	margin-bottom: 40px;
+}
+.qq a
+{	display: inline-block;
+	margin: 0 30px;
+	width: 260px;
+	height: 260px;
+	overflow: hidden;
+	border-radius:50%;
+	
+	
+
+}
+.qq a img
+{	
+	width: 110%;
+	filter: grayscale(100%);
+	transition: 0.6s all;
+
+}
+.qq a:hover > img
+{
+	filter: none;
+}
+.qq a img
+{
+	display: table-row;
+}
+.team
+{
+	text-align: center;
+}
+.para{
+	text-align: center;
+	margin-top: 50px;
+	list-style-type: none;
+	
+	
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

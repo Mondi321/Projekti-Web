@@ -1,0 +1,160 @@
+*
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header
+{
+	
+	background: url(../img/Screenshot\ 2021-12-06\ 105959.png);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+    
+}
+ul
+{
+	margin-top: 50px;
+	float: right;
+	list-style-type: none;
+	margin-right: 60px;
+}
+ul li
+{
+	display: inline-block;
+
+}
+ul li.active a
+{
+	background-color: white;
+	color: #c90d0d;
+}
+ul li a
+{
+
+	margin: 3px;
+	text-decoration: none;
+	color: white;
+	padding: 5px 20px;
+	border: 1px solid white;
+	transition: 0.5s ease;
+}
+ul li a:hover
+{
+	background-color: white;
+	color: #c90d0d;
+	transition: 0.5s ease;
+}
+.logo img
+{
+	float: left;
+	width:110px;
+	margin-left: 120px;	 
+}
+.reservation
+{
+	color:darkgrey;
+	padding-top: 300px;
+	padding-left: 40px;
+	text-align: center;
+	padding-right:  1200px;
+}
+.border
+{
+	display: block;
+	width: 50px;
+	height: 3px;
+	background: #c90d0d;
+	margin-bottom:40px;
+}
+.contact
+{
+	padding-top: 200px;
+}
+.contact h1
+{
+	text-align: center;
+	color: white;
+}
+.border
+{
+	width: 100px;
+	height: 5px;
+	background:#c90d0d;
+	margin: 20px auto;
+}
+.contact-form
+{
+	max-width: 600px;
+	margin: auto;
+	padding: 0 10px;
+	overflow: hidden;
+}
+.contact-form-text
+{
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 16px 0;
+	border:0;
+	background:rgb(27, 26, 26);
+	padding: 20px 40px;
+	outline: none;
+	color: #fff;
+	transition: 0.5s;
+	border-radius:5px ;
+}
+.contact-form-text:hover
+{
+	box-shadow: 0 0 3px 3px #c90d0d;
+}
+textarea
+{
+	resize: none;
+	text-decoration: none;
+	height: 100px;
+} 
+.contact-form-button
+{
+	float: right;
+	border: 0;
+	background-color: rgb(12, 12, 12);
+	color:blanchedalmond;
+	padding: 15px 50px;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.contact-form-button:hover
+{
+	background-color:#c90d0d;
+	color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
