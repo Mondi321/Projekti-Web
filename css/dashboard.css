@@ -14,6 +14,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
+  background-color: rgb(224, 224, 224);
 }
 
 
@@ -124,61 +125,44 @@ td{
   color: darkred;
 }
 
+.button{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.button a{
+  padding: 10px 25px;
+  background-color: darkred;
+  color: white;
+  border-radius: 5px;
+}
+
+
 
 #menu{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 #menu a{
+    background-color: darkred;
+    color: black;
+    border-radius: 15px;
     padding: 3px 7px;
 }
 
-#menu a:first-child{
-    background-color: darkred;
-    color: black;
-    border-radius: 15px;
-}
-
-#menu a:last-child{
-    background-color: darkred;
-    color: black;
-    border-radius: 15px;
-}
-
-
-#menu a:first-child:hover{
-    background-color: black;
-    color: white;
-}
-
-#menu a:last-child:hover{
-    background-color: black;
-    color: white;
-}
-
-#menu1 a{
-    background-color: darkred;
-    color: black;
-    border-radius: 15px;
-}
-
-#menu1 a:hover{
+#menu a:hover{
   background-color: black;
   color: white;
-}
-
-#menu1{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-#menu1 a{
-  padding: 3px 7px;
 }
 
 .menu11 a{
@@ -193,45 +177,6 @@ td{
   color: white;
 }
 
-
-#menu2 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu2 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu2{
-display: flex;
-flex-direction: row;
-gap: 10px;
-flex-wrap: wrap;
-}
-
-#menu3 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu3 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu3{
-display: flex;
-flex-direction: row;
-gap: 10px;
-flex-wrap: wrap;
-}
-
 caption{
   font-weight: bold;
   border-bottom: 2px darkred solid;
@@ -240,127 +185,8 @@ caption{
   margin-bottom: 10px;
 }
 
-#menu4 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu4 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu4{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
-
-#menu5 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu5 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu5{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
-
-#menu6 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu6 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu6{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
-
-#menu7 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu7 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu7{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
 
 
-#menu8 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu8 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu8{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
-
-
-#menu9 a{
-  background-color: darkred;
-  color: black;
-  border-radius: 15px;
-  padding: 3px 7px;
-}
-
-#menu9 a:hover{
-background-color: black;
-color: white;
-}
-
-#menu9{
-display: flex;
-flex-direction: row;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-}
 
 
 

@@ -30,6 +30,10 @@
     </nav>
     <br><br>
     <h1 class = "h1">WELCOME BACK <?php echo $_SESSION['emri']; ?></h1><br><br>
+    <div class="button">
+        <a href="../index.php">HOME</a>
+        <a href="../signin.php">LOG OUT</a>
+    </div>
     <?php if (isset($_SESSION['email']) && str_ends_with($_SESSION['email'], 'admin.com')){
         ?>
         <div id = "dashboard">
@@ -85,7 +89,7 @@
                     <td><?php echo $value['brendi']; ?></td>
                     <td><?php echo $value['pershkrimi']; ?></td>
                     <td><?php echo $value['cmimiPaZbritje']; ?></td>
-                    <td id ="menu1">
+                    <td id ="menu">
                         <a href="edit_foto1.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_foto1.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -115,7 +119,7 @@
                     <td><?php echo $value['brendi']; ?></td>
                     <td><?php echo $value['cmimiPaZbritje']; ?></td>
                     <td><p><?php echo $value['cmimiMeZbritje']; ?></p></td>
-                    <td id = "menu2">
+                    <td id = "menu">
                         <a href="edit_foto2.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_foto2.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -143,7 +147,7 @@
                     <td><?php echo $value['emri']; ?></td>
                     <td><?php echo $value['email']; ?></td>
                     <td><?php echo $value['mesazhi']; ?></td>
-                    <td id = "menu3">
+                    <td id = "menu">
                         <a href="edit_contact.php?id=<?php echo $value['ID_contact']; ?>">Edit</a>
                         <a href="delete_contact.php?id=<?php echo $value['ID_contact']; ?>">Delete</a>
                     </td>
@@ -171,7 +175,7 @@
                     <td><?php echo $value['foto']; ?></td>
                     <td><?php echo $value['brendi']; ?></td>
                     <td><?php echo $value['pershkrimi']; ?></td>
-                    <td id = menu4>
+                    <td id = menu>
                         <a href="edit_slideshow1.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_slideshow1.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -204,7 +208,7 @@
                     <td><?php echo $value['cmimiMeZbritje']; ?></td>
                     <td><?php echo $value['cmimiPaZbritje']; ?></td>
                     <td><?php echo $value['zbritja']; ?></td>
-                    <td id = "menu5">
+                    <td id = "menu">
                         <a href="edit_swiper1.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_swiper1.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -228,7 +232,7 @@
                 <tr>
                     <td><?php echo $value['ID_produkti']; ?></td>
                     <td><?php echo $value['foto']; ?></td>
-                    <td id = "menu6">
+                    <td id = "menu">
                         <a href="edit_gallery.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_gallery.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -256,7 +260,7 @@
                     <td><?php echo $value['foto']; ?></td>
                     <td><?php echo $value['brendi']; ?></td>
                     <td><?php echo $value['cmimiPaZbritje']; ?></td>
-                    <td id = "menu7">
+                    <td id = "menu">
                         <a href="edit_bestS.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_bestS.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -286,7 +290,7 @@
                     <td><?php echo $value['brendi']; ?></td>
                     <td><?php echo $value['cmimiMeZbritje']; ?></td>
                     <td><?php echo $value['cmimiPaZbritje']; ?></td>
-                    <td id = "menu8">
+                    <td id = "menu">
                         <a href="edit_NA.php?id=<?php echo $value['ID_produkti']; ?>">Edit</a>
                         <a href="delete_NA.php?id=<?php echo $value['ID_produkti']; ?>">Delete</a>
                     </td>
@@ -318,7 +322,7 @@
                     <td><?php echo $value['pershkrimi']; ?></td>
                     <td><?php echo $value['user']; ?></td>
                     <td><?php echo $value['data']; ?></td>
-                    <td id = "menu9">
+                    <td id = "menu">
                         <a href="edit_blog.php?id=<?php echo $value['ID_blog']; ?>">Edit</a>
                         <a href="delete_blog.php?id=<?php echo $value['ID_blog']; ?>">Delete</a>
                     </td>
