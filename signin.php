@@ -15,7 +15,6 @@
     $menu = new Controller1();
     if(isset($_POST['submit'])){
         $menu->insert($_POST);
-        return header('Location: index.php');
     }
 ?>
 
@@ -23,7 +22,7 @@
     <div class="form-container sign-in-form">
         <div class="form-box sign-in-box">
             <h2>Login</h2>
-            <form method = "POST" action="validation.php">
+            <form method = "POST" action="validation.php" onsubmit="return validateForm();">
                 <div class="field">
                     <i class="fas fa-at"></i>
                     <input name = "email1" id="emaillog" type="text" placeholder="Email ID" required>
@@ -38,7 +37,7 @@
                 <div class="forgot-link">
                     <a href="">Forgot password?</a>
                 </div>
-                <input name = "submit1" class="submit-button" type="submit" value="Login" onclick="validateForm();">
+                <input name = "submit1" class="submit-button" type="submit" value="Login" >
             </form>
         </div>
         <div class="imgBox sign-in-imgBox">
@@ -60,7 +59,7 @@
         </div>
         <div class="form-box sign-up-box">
             <h2>Sign up</h2>
-            <form method = "POST">
+            <form method = "POST" onsubmit="event.preventDefault(); validateSignUp();">
                 <div class="field">
                     <i class="fas fa-user"></i>
                     <input name = "emri" id="name" type="text" placeholder="Full name" required>
@@ -81,7 +80,7 @@
                     <i class="fas fa-unlock-alt"></i>
                     <input name = "cpassword" id="cpassword" type="password" placeholder="Confirm password" required>
                 </div>
-                <input name = "submit" class="submit-button" type="submit" value="Sign up" onclick="validateSignUp()">
+                <input name = "submit" class="submit-button" type="submit" value="Sign up" >
             </form>
         </div>
     </div>

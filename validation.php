@@ -28,7 +28,7 @@
         foreach ($allUsers1 as $user) {
             if($user['email']==$email&&$user['password']==$password){
                 $_SESSION['emri']=$user['emri'];
-                $_SESSION['email']=$user['email'];
+                $_SESSION['roli']=$user['roli'];
                 return true;
             }
         }

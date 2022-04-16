@@ -34,7 +34,7 @@
         <a href="../index.php">HOME</a>
         <a href="../signin.php">LOG OUT</a>
     </div>
-    <?php if (isset($_SESSION['email']) && str_ends_with($_SESSION['email'], 'admin.com')){
+    <?php if (isset($_SESSION['roli']) && $_SESSION['roli'] == 2){
         ?>
         <div id = "dashboard">
             <table class="content-table">

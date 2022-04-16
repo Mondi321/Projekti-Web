@@ -7,24 +7,31 @@ function validateSignUp(){
     var PhoneNumber = /^[0-9]+$/
     if (emri.length < 6) {
         alert('Please enter a valid name, longer than 6 characters');
+        return false;
     }
     else if (emlR.includes(' ')) {
         alert('Please enter a vaid email');
+        return false;
     }
     else if (!emlR.endsWith(".com")) {
         alert('please enter a valid email');
+        return false;
     }
     else if (!emlR.includes('@')) {
         alert('please enter a valid email');
+        return false;
     }
     else if(!PhoneNumber.test(phone)){
         alert('Please enter a valid phone number');
+        return false;
     }
     else if (passR.length < 8 || passR === passR.toLowerCase() || passR === passR.toUpperCase() || !stringContainsNumber(passR)) {
         alert('Your password must be longer than 8 characters and contain lowercase and uppercase characters as well as at least one number!');
+        return false;
     }
     else if (passR != cpassR) {
         alert('Please confirm your password correctly!');
+        return false;
     }
     else{
         alert('You have registered succsesfully');

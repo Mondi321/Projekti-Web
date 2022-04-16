@@ -31,7 +31,7 @@
             $query->bindParam(':password', $request['password']);
             $query->execute();
     
-            return header('Location: ../index.php');
+            return header('Location: index.php');
         }
 
         public function edit($id){
