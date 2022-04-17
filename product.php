@@ -1,6 +1,7 @@
 <?php 
     require_once 'controllers/produktet.php'; 
     require_once 'controllers/blog.php'; 
+    require_once 'controllers/reviews.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -161,7 +162,7 @@
                     echo '<div class="swiper-slide slide">
                                 <div class="image">
                                     <span class="discount">-'.$sw1[$i]['zbritja'].'%</span>
-                                    <img src="'.$sw1[$i]['foto'].'" alt="">
+                                    <a href="views/products_view.php?id='.$sw1[$i]['ID_produkti'].'"><img src="'.$sw1[$i]['foto'].'" alt=""></a>
                                     <div class="icons">
                                         <a href="#" class="fas fa-shopping-cart"></a>
                                         <a href="#" class="fas fa-heart"></a>
@@ -182,7 +183,7 @@
                             </div>';
                 }
             ?>
-
+            
             <!-- <div class="swiper-slide slide">
                 <div class="image">
                     <span class="discount">-25%</span>
@@ -426,8 +427,7 @@
             for ($i = 0; $i < count($bestS); $i++){
                 echo    '<div class="box">
                             <div class="image">
-                                <img src="'.$bestS[$i]['foto'].'" alt="">
-                            
+                                <a href="views/products_view.php?id='.$bestS[$i]['ID_produkti'].'"><img src="'.$bestS[$i]['foto'].'" alt=""></a>
                             </div>
                             <div class="content">
                                 <h3>'.$bestS[$i]['brendi'].'</h3>
@@ -436,7 +436,7 @@
                         </div>';
             }
         ?>
-
+        
         <!-- <div class="box">
             <div class="image">
                 <img src="img/ora3.jpg" alt="">
@@ -496,7 +496,7 @@
                 for($i = 0; $i < count($newArrivals) ; $i++){
                     echo '  <div class="swiper-slide slide">
                                 <div class="image">
-                                    <img src="'.$newArrivals[$i]['foto'].'" alt="">
+                                    <a href="views/products_view.php?id='.$newArrivals[$i]['ID_produkti'].'"><img src="'.$newArrivals[$i]['foto'].'" alt=""></a>
                                 </div>
                                 <div class="content">
                                     <p>'.$newArrivals[$i]['brendi'].'</p>
@@ -506,7 +506,7 @@
                             </div>';
                 }
             ?>
-
+            
             <!-- <div class="swiper-slide slide">
                 <div class="image">
                     <img src="img/ora13.jpg" alt="">
@@ -614,7 +614,31 @@
 
         <div class="swiper-wrapper">
 
-            <div class="swiper-slide slide">
+            <?php
+                $reviews = new Reviews;
+                $rev = $reviews->readData();
+                for ($i = 0;$i < count($rev); $i++){
+                    echo '  <div class="swiper-slide slide">
+                                <div class="user">
+                                    <img src="'.$rev[$i]['foto'].'" alt="">
+                                    <div class="info">
+                                        <h3>'.$rev[$i]['emri'].'</h3>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text">'.$rev[$i]['pershkrimi'].'</p>
+                            </div>';
+                }
+            ?>
+
+
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-1.png" alt="">
                     <div class="info">
@@ -629,9 +653,9 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quis ipsa aspernatur incidunt iusto veniam cumque error quaerat officia. Aspernatur?</p>
-            </div>
+            </div> -->
 
-            <div class="swiper-slide slide">
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-4.png" alt="">
                     <div class="info">
@@ -646,9 +670,9 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum similique, numquam non, quasi, voluptatibus perspiciatis fugiat incidunt veniam nulla in aut aliquid necessitatibus nobis reiciendis ullam explicabo. Nulla, rem adipisci.</p>
-            </div>
+            </div> -->
 
-            <div class="swiper-slide slide">
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-5.png" alt="">
                     <div class="info">
@@ -663,9 +687,9 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit aliquid mollitia voluptatem alias illo officiis.</p>
-            </div>
+            </div> -->
 
-            <div class="swiper-slide slide">
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-2.png" alt="">
                     <div class="info">
@@ -680,9 +704,9 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quis ipsa aspernatur incidunt iusto veniam cumque error quaerat officia. Aspernatur?</p>
-            </div>
+            </div> -->
 
-            <div class="swiper-slide slide">
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-3.png" alt="">
                     <div class="info">
@@ -697,9 +721,9 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi minima sed obcaecati iste beatae quo praesentium, deleniti earum velit labore nobis voluptates a quam veniam delectus fugiat! Saepe, eos!</p>
-            </div>
+            </div> -->
 
-            <div class="swiper-slide slide">
+            <!-- <div class="swiper-slide slide">
                 <div class="user">
                     <img src="img/pic-6.png" alt="">
                     <div class="info">
@@ -714,10 +738,12 @@
                     </div>
                 </div>
                 <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In quis ipsa aspernatur incidunt iusto veniam cumque error quaerat officia. Aspernatur?</p>
-            </div>
-
+            </div> -->
+                
+        
         </div>
-
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 
 </section>

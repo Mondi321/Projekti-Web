@@ -23,11 +23,12 @@
     width: 400px;
     height: 350px;
     border-radius: 10%;
+    object-fit: cover;
 }
 
 #productView .produktiDetajet{
     flex-direction: column;
-    display: flex;
+    display: flex;  
     width: 300px;
     justify-content: center;
     align-items: center;

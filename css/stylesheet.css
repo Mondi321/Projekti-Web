@@ -557,6 +557,23 @@ nav ul li a:hover::after{
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
+.img-slider a{
+  position: absolute;
+  top: 38%;
+  left: 20%;
+  z-index: 4;
+  background: rgb(41, 37, 37);
+  padding: 10px 30px;
+  border: 2px solid rgb(175, 6, 6);
+  border-radius: 50px;
+  color: #fffafa;
+  font-weight: bold;
+}
+
+.img-slider a:hover{
+  background: rgb(175, 6, 6);
+  cursor: pointer;
+}
 
 @media (max-width: 1200px){
   .img-slider{
@@ -567,6 +584,11 @@ nav ul li a:hover::after{
   .slider-button{
     margin-top: 80px;
     margin-left: -50px;
+  }
+  .img-slider a{
+    position: absolute;
+    top: 220px;
+    left: 40px;
   }
 }
 
@@ -642,6 +664,11 @@ nav ul li a:hover::after{
     height: 8px;
     margin: 6px;
   }
+  .img-slider a{
+    position: absolute;
+    top: 160px;
+    left: 40px;
+  }
 }
 
 @media (max-width: 530px){
@@ -670,29 +697,16 @@ nav ul li a:hover::after{
   .img-slider .navigation{
     bottom: 10px;
   }
+  .img-slider a{
+    position: absolute;
+    top: 112px;
+    left: 11px;
+    padding: 10px 21px;
+  }
 }
 
 
-.img-slider a{
-  position: absolute;
-  top: 38%;
-  left: 20%;
-  z-index: 4;
-  background: rgb(41, 37, 37);
-  padding: 10px 30px;
-  border: 2px solid rgb(175, 6, 6);
-  border-radius: 50px;
-}
 
-.img-slider a{
-  color: #fffafa;
-  font-weight: bold;
-}
-
-.img-slider a:hover{
-  background: rgb(175, 6, 6);
-  cursor: pointer;
-}
   
 
 

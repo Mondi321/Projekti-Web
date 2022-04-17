@@ -119,6 +119,7 @@ td{
     text-align: center;
     background-color: red;
     border: 1px black solid;
+    color: white;
 }
 
 .h1{
@@ -155,7 +156,7 @@ td{
 
 #menu a{
     background-color: darkred;
-    color: black;
+    color: white;
     border-radius: 15px;
     padding: 3px 7px;
 }
@@ -168,7 +169,7 @@ td{
 .menu11 a{
   padding: 3px 7px;
   background: darkred;
-  color: black;
+  color: white;
   border-radius: 15px;
 }
 

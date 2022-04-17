@@ -6,6 +6,7 @@
     require_once '../controllers/produktet.php';
     require_once '../controllers/controller4.php';
     require_once '../controllers/blog.php';
+    require_once '../controllers/reviews.php';
     include '../includes/header.php';
 ?>
 
@@ -325,6 +326,34 @@
                     <td id = "menu">
                         <a href="edit_blog.php?id=<?php echo $value['ID_blog']; ?>">Edit</a>
                         <a href="delete_blog.php?id=<?php echo $value['ID_blog']; ?>">Delete</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+            <table>
+                <caption>REVIEWS</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Emri</th>
+                    <th>Pershkrimi</th>
+                    <td class = "menu11">
+                        <a href="create_review.php">Create</a>
+                    </td>
+                </tr>
+                <?php
+                    $review = new Reviews;
+                    $rev = $review->readData();
+                    foreach($rev as $value):
+                ?>
+                <tr>
+                    <td><?php echo $value['ID_review'] ?></td>
+                    <td><?php echo $value['foto'] ?></td>
+                    <td><?php echo $value['emri'] ?></td>
+                    <td><?php echo $value['pershkrimi'] ?></td>
+                    <td id = "menu">
+                        <a href="edit_review.php?id=<?php echo $value['ID_review']; ?>">Edit</a>
+                        <a href="delete_review.php?id=<?php echo $value['ID_review']; ?>">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

@@ -288,7 +288,7 @@
                     for($i = 0; $i < count($produktet2); $i++){
                         echo '
                             <div class="foto-slider-foto">
-                                <img src="'.$produktet2[$i]['foto'].'" alt="Casio foto">
+                                <a href="views/products_view.php?id='.$produktet2[$i]['ID_produkti'].'"><img src="'.$produktet2[$i]['foto'].'" alt="Casio foto"></a>
                                 <div class="product-details">
                                     <h2>'.$produktet2[$i]['brendi'].'</h2>
                                     <p> <span>'.$produktet2[$i]['cmimiPaZbritje'].'€'.'</span> '.$produktet2[$i]['cmimiMeZbritje'].'€'.'</p>
