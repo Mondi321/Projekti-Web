@@ -135,7 +135,7 @@
             <a href="#">SHOP NOW</a>
         </div>
     </div>
-
+    
     <div id="faqja3">
         <h1>Most Popular Watches</h1>
         <hr>
@@ -145,10 +145,11 @@
                 $fotot1 = new Produktet;
                 $produktet1= $fotot1->readData();
                 for($i = 0; $i < count($produktet1); $i++){
+                    $url = "views/products_view.php?id=".$produktet1[$i]['ID_produkti'];
                     echo '<div class="produkti">
                             <div class="foto">
                                 <img src="'.$produktet1[$i]['foto'].'" alt="Hublot foto">
-                                <span><input type="button" value="More Details"></span>
+                                <span><input type="button" value="More Details" onclick="window.location=\''.$url.'\'"></span>
                             </div>
                             <div class="pershkrimi">
                                 <h3>'.$produktet1[$i]['brendi'].'</h3>
