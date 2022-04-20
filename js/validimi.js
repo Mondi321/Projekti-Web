@@ -48,13 +48,3 @@ function stringContainsNumber(_input) {
     return false;
 }
 
-// function validateForm(){
-//     var emailSign = document.getElementById('emaillog').value;
-//     var passSign = document.getElementById('passwordlog').value;
-//     if(emailSign!='email_provuese@gmail.com'||passSign!='CSEweb2021'){
-//     alert("please check your email or password!");
-//     }
-//     else {
-//     setTimeout(function(){window.location.reload();},10);
-//     }
-//     }

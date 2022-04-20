@@ -10,11 +10,16 @@
 </head>
 
 <?php
+    session_start();
     require_once './controllers/controller1.php';
     
     $menu = new Controller1();
     if(isset($_POST['submit'])){
         $menu->insert($_POST);
+    }
+
+    if(isset($_SESSION['emri'])){
+        return header('Location: views/dashboard.php');
     }
 ?>
 
@@ -22,14 +27,14 @@
     <div class="form-container sign-in-form">
         <div class="form-box sign-in-box">
             <h2>Login</h2>
-            <form method = "POST" action="validation.php" onsubmit="return validateForm();">
+            <form method = "POST" action="validation.php">
                 <div class="field">
                     <i class="fas fa-at"></i>
                     <input name = "email1" id="emaillog" type="text" placeholder="Email ID" required>
                 </div>
                 <div class="field">
                     <i class="fas fa-unlock-alt"></i>
-                    <input name = "password1" id="passwordlog" class="password-input" type="password" placeholder="Password" required>
+                    <input name = "password1" id="passwordlog" class="password-input" type="password" placeholder="Password" autocomplete = "off" required>
                     <div class="eye">
                         <i class="far fa-eye-slash"></i>
                     </div>
@@ -74,11 +79,11 @@
                 </div>
                 <div class="field">
                     <i class="fas fa-unlock-alt"></i>
-                    <input name = "password" id="password" type="password" placeholder="Password" required>
+                    <input name = "password" id="password" type="password" placeholder="Password" autocomplete = "off" required>
                 </div>
                 <div class="field">
                     <i class="fas fa-unlock-alt"></i>
-                    <input name = "cpassword" id="cpassword" type="password" placeholder="Confirm password" required>
+                    <input name = "cpassword" id="cpassword" type="password" placeholder="Confirm password" autocomplete = "off" required>
                 </div>
                 <input name = "submit" class="submit-button" type="submit" value="Sign up" >
             </form>

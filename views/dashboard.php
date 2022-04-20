@@ -1,6 +1,6 @@
 <?php 
     
-    session_set_cookie_params(['samesite' => 'None']);
+    header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
     session_start();
     require_once '../controllers/controller1.php';
     require_once '../controllers/produktet.php';
@@ -33,7 +33,7 @@
     <h1 class = "h1">WELCOME BACK <?php echo $_SESSION['emri']; ?></h1><br><br>
     <div class="button">
         <a href="../index.php">HOME</a>
-        <a href="../signin.php">LOG OUT</a>
+        <a href="../logout.php">LOG OUT</a>
     </div>
     <?php if (isset($_SESSION['roli']) && $_SESSION['roli'] == 2){
         ?>
