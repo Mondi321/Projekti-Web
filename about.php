@@ -27,7 +27,7 @@
 <div class="qq">
 
 
-<a href="member1.php"><img src="img/member1.jpg">
+<a href="member.php"><img src="img/member1.jpg">
 </a>
 
 <a href="member2.php"><img src="img/member2.jpg"></a>
