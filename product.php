@@ -133,7 +133,7 @@
         <span>why choose us?</span>
         <h3>Achieve the impossible</h3>
         <p>Your watch has been carefully designed to perfectly match its strap, but don’t let that stop you adding your own flair and experimenting with further combinations.</p>
-        <a href="#" class="btn">read more</a>
+        <a href="about.php" class="btn">read more</a>
     </div>
     
 </section>
