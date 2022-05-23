@@ -13,7 +13,7 @@
             <ul>
                 
     <li><a href="index.php">Home</a></li>
-<li><a href="member1.php">Other member</a></li>
+<li><a href="member.php">Other member</a></li>
 <body>                <li><a href="contact.php">Contact us</a></li>
             </ul>
             <img src="img/cart.png" class="cart-icon">

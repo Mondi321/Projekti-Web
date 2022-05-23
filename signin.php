@@ -64,7 +64,7 @@
         </div>
         <div class="form-box sign-up-box">
             <h2>Sign up</h2>
-            <form method = "POST" onsubmit="event.preventDefault(); validateSignUp();">
+            <form method = "POST" onsubmit="return validateSignUp();">
                 <div class="field">
                     <i class="fas fa-user"></i>
                     <input name = "emri" id="name" type="text" placeholder="Full name" required>
