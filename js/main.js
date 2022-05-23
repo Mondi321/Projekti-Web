@@ -56,7 +56,6 @@ var slides = document.querySelectorAll('.slide');
     var btns = document.querySelectorAll('.btn');
     let currentSlide = 1;
 
-    // Javascript for image slider manual navigation
     var manualNav = function(manual){
       slides.forEach((slide) => {
         slide.classList.remove('active');
@@ -77,7 +76,6 @@ var slides = document.querySelectorAll('.slide');
       });
     });
 
-    // Javascript for image slider autoplay navigation
     var repeat = function(activeClass){
       let active = document.getElementsByClassName('active');
       let i = 1;
@@ -123,10 +121,8 @@ buttonRight.addEventListener('click', function(){
 })
 
 const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
-// alert(maxScrollLeft);
-// alert("Left Scroll:" + slider.scrollLeft);
 
-//AUTO PLAY THE SLIDER 
+
 function autoPlay() {
     if (slider.scrollLeft > (maxScrollLeft - 1)) {
         slider.scrollLeft -= maxScrollLeft;
@@ -136,7 +132,8 @@ function autoPlay() {
 }
 let play = setInterval(autoPlay, 50);
 
-// PAUSE THE SLIDE ON HOVER
+
+
 for (var i=0; i < fotot.length; i++){
 
 fotot[i].addEventListener('mouseover', function() {
@@ -155,7 +152,6 @@ var navbar = document.querySelector('nav');
 
 window.onscroll = function() {
 
-  // navbar and top button 
   if (window.pageYOffset > 0) {
     navbar.classList.add('nav-active');
     topButton.style.display = "block";
@@ -195,9 +191,7 @@ function addtocart() {
 
 $("li").click(function(){
             
-  // remove the class i.e. selectednav from all li
   $('.nav-items li').removeClass("active-nav-item");
-  // apply selectednav class to the current item
   $(this).addClass("active-nav-item");
 });
 

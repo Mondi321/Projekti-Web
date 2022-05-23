@@ -1,6 +1,5 @@
 <?php 
     
-    header("Set-Cookie: cross-site-cookie=whatever; SameSite=None; Secure");
     session_start();
     require_once '../controllers/controller1.php';
     require_once '../controllers/produktet.php';
