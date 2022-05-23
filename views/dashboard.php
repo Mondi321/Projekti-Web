@@ -30,7 +30,7 @@
         <a href="../contact.php">contact us</a>
     </nav>
     <br><br>
-    <h1 class = "h1">WELCOME BACK <?php echo $_SESSION['emri']; ?></h1><br><br>
+    <h1 class = "h1">WELCOME BACK <?php if(isset($_SESSION['emri'])){echo $_SESSION['emri'];}  ?></h1><br><br>
     <div class="button">
         <a href="../index.php">HOME</a>
         <a href="../logout.php">LOG OUT</a>
@@ -46,7 +46,7 @@
                         <th>Email</th>
                         <th>Numri Telefonit</th>
                         <td class = "menu11">
-                            <a href="../signin.php">Regjistro</a>
+                            <a href="../logout.php">Regjistro</a>
                         </td>
                     </tr>
                 <?php

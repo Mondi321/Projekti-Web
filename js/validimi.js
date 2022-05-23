@@ -1,4 +1,5 @@
 function validateSignUp(){
+
     var passR = document.getElementById('password').value;
     var cpassR = document.getElementById('cpassword').value;
     var emlR = document.getElementById('email').value;
